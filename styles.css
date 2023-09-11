@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Karla:wght@400;700&family=Outfit&family=Raleway:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);      
+}
+*  {
+    margin: 0;
+
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+.main{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas: 
+    "area1 area1"
+    "area2 area3"
+    ;
+    
+
+   
+}
+.header{
+    padding: 30px;
+    grid-area: area1;
+    height: 344px;
+}
+.header__tittle1{
+    padding-bottom: 30px;
+    color:var(--Cyan) ;
+}
+.header__tittle2{
+    padding-bottom: 30px;
+    color: var(--BrightYellow);
+    margin-top:35px ;
+}
+.header__p{
+    margin-top:35px ;
+    color: gray;
+    line-height: 35px;
+}
+.pie1{
+    padding-top:35px ;
+    grid-area: area2;
+    background-color: var(--Cyan);
+    padding: 30px 0px 30px 30px;
+    color: white;
+    
+    
+}
+.pie1__mensual{
+    padding:8px ;
+    font-weight: 400;
+    opacity: 0.7;
+    margin-left: 3px;
+}
+.moni__mensual{
+    display: flex;
+    padding:10px 0px ;
+}
+.pie1__log{
+    height: 40px;
+    width: 90%;
+    background-color:var(--BrightYellow);
+    text-align: center;
+    margin: 20px 0px;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #999;}
+    .pie2{
+        background-color:rgb(90, 197, 195);
+        color: white;
+        padding:30px;
+        grid-area: area3;
+    }
+    .pie2__p{
+        padding-top: 30px;
+        width: 80%;
+        line-height: 35px;
+    }
+    @media (max-width:376px){
+
+        .main{
+            grid-template-rows:1fr 1fr 1fr ;
+            grid-template-areas: 
+            "area1 area1"
+            "area2 area2 "
+            "area3 area3"    
+            ;
+        }
+        .header__p{
+            line-height: 25px;
+        }
+        
+        .pie1__log{
+           
+            margin-top: 50px;
+            height: 50px;
+            width: 85%;
+        }
+        .pie2__p{
+            line-height: 30px;
+        }
+    }
